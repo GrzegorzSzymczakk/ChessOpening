@@ -1,12 +1,16 @@
 <template>
   <p> Hello</p>
-  <div class="board"></div>
+  <div class="board">
+    <SquareField/>
+  </div>
 </template>
 
 <script>
 
+import SquareField from "@/components/SquareField";
 export default {
   name: "ChessBoard",
+  components: {SquareField},
   methods: {
     testAlarm(){
       alert("Hello")
