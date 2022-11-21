@@ -1,0 +1,50 @@
+<template>
+  <p> Hello</p>
+  <div class="board"></div>
+</template>
+
+<script>
+
+export default {
+  name: "ChessBoard",
+  methods: {
+    testAlarm(){
+      alert("Hello")
+    }
+  },
+  created() {
+    this.testAlarm()
+  }
+}
+
+</script>
+
+<style scoped>
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 80px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 640px;
+  height: 640px;
+  border: 1px solid black;
+}
+
+.square {
+  height: 80px;
+  width: 80px;
+  border: 1px solid black;
+}
+
+.black {
+  background: black;
+}
+
+.white {
+  background: sandybrown;
+}
+
+
+</style>
