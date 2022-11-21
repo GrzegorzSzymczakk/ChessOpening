@@ -1,7 +1,8 @@
 <template>
   <p> Hello</p>
   <div class="board">
-    <SquareField/>
+    <SquareField v-for="field in 64" :key="field">
+    </SquareField>
   </div>
 </template>
 
@@ -11,13 +12,16 @@ import SquareField from "@/components/SquareField";
 export default {
   name: "ChessBoard",
   components: {SquareField},
+  data() {
+    const fields = [0,0,0,3,3,3,3,3,3,3,3]
+    return{
+      fields
+    }
+  },
   methods: {
     testAlarm(){
       alert("Hello")
     }
-  },
-  created() {
-    this.testAlarm()
   }
 }
 
@@ -27,6 +31,7 @@ export default {
 .board {
   display: grid;
   grid-template-columns: repeat(8, 80px);
+  grid-template-rows: repeat(8, 80px);
   position: absolute;
   top: 50%;
   left: 50%;
