@@ -1,19 +1,31 @@
 <template>
   <p> Hello </p>
   <div class="board">
-     <SquareField v-for="field in 64"
-                  :key="field"
-                  :counter="field"
-     />
+    <SquareField v-for="field in 64"
+                 :key="field"
+                 :counter="field"
+                 :white="this.fieldColor"
+    >
+      </SquareField>
   </div>
 </template>
 
-
 <script>
 import SquareField from "@/components/SquareField";
+
 export default {
   name: "ChessBoard",
   components: {SquareField},
+  data() {
+    return {
+      fieldColor: true
+    }
+  },
+  watch:{
+    counter(){
+      this.fieldColor=!this.fieldColor
+    }
+  }
 }
 </script>
 

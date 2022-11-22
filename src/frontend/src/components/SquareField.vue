@@ -1,14 +1,19 @@
 <template>
-    <div v-if= "counter % 2 == 0" class="white">{{counter}}</div>
-    <div v-else class="brown" >{{counter}}</div>
-
+    <div v-if="this.isWhite" class="white">{{counter}}</div>
+    <div v-else>{{counter}}</div>
 </template>
 
 <script>
 
 export default {
   name: "SquareField",
-  props: ['counter']
+  props: ['counter', 'white'],
+  computed:{
+    isWhite(){
+      const zeroBasedCounter = this.counter - 1;
+      return (zeroBasedCounter % 2 === 1 && zeroBasedCounter % 16 <= 7) || (zeroBasedCounter % 2 === 0 && zeroBasedCounter % 16 >= 8)
+    }
+  }
 }
 </script>
 
@@ -18,14 +23,11 @@ div{
   width: 80px;
   height: 80px;
   border: 1px solid black;
-  background-color: red;
+  background-color: saddlebrown;
 }
 
 .white{
   background-color: sandybrown;
 }
 
-.brown {
-  background-color: saddlebrown;
-}
 </style>
