@@ -1,23 +1,20 @@
 <template>
-  <ChessBoard/>
+  <ChessBoardBox class="container"/>
 </template>
 
 <script>
-import ChessBoard from "@/components/ChessBoard";
+import ChessBoardBox from "@/components/ChessBoardBox";
 
 export default {
   name: 'App',
-  components: {
-    ChessBoard
-  }
+  components: {ChessBoardBox}
 }
 </script>
 
 <style>
-{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.container{
+  display: grid;
+  justify-content: center;
 }
 
 </style>
