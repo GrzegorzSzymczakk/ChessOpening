@@ -25,7 +25,6 @@ export default {
   display: grid;
   width: 80px;
   height: 640px;
-  border: 1px solid black;
   grid-column-start: 2;
 }
 .bottom{

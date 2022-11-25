@@ -1,6 +1,6 @@
 <template>
-    <div v-if="this.isWhite" class="white">{{counter}}</div>
-    <div v-else>{{counter}}</div>
+    <div v-if="this.isWhite" class="white" :id="counter" >{{counter}}</div>
+    <div v-else :id="counter" >{{}}</div>
 </template>
 
 <script>

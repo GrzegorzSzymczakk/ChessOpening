@@ -1,6 +1,9 @@
 <template>
 <div class="chapter">
+  <h3>Sicilian Defense</h3>
+  <li class="chapters">
 
+  </li>
 </div>
 </template>
 
@@ -11,8 +14,8 @@ export default {
 </script>
 <style scoped>
 .chapter{
-  height: 200px;
-  width: 120px;
+  height: 500px;
+  width: 300px;
   border: 1px solid black;
 
 }
