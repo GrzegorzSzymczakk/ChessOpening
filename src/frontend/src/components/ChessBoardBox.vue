@@ -22,7 +22,7 @@ export default {
 
 }
 .right {
-  display: flex;
+  display: grid;
   width: 80px;
   height: 640px;
   border: 1px solid black;

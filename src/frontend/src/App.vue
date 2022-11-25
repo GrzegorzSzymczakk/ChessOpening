@@ -15,6 +15,7 @@ export default {
 .container{
   display: grid;
   justify-content: center;
+  grid-row-start: 1;
 }
 
 </style>
