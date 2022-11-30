@@ -1,9 +1,9 @@
 <template>
 <div class="chapter">
   <h3>Sicilian Defense</h3>
-  <li class="chapters">
+  <ul class="chapters">
 
-  </li>
+  </ul>
 </div>
 </template>
 
