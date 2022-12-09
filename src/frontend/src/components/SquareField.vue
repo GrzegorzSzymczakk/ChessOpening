@@ -1,13 +1,18 @@
 <template>
-    <div v-if="this.isWhite" class="white" :id="counter" >{{counter}}</div>
+    <div v-if="this.isWhite" class="white" :id="counter" >
+      {{counter}}
+      <FigureComp :figure="figure"/>
+    </div>
     <div v-else>{{counter}}</div>
 </template>
 
 <script>
 
+import FigureComp from "@/components/FigureComp";
 export default {
   name: "SquareField",
-  props: ['counter', 'white'],
+  components: {FigureComp},
+  props: ['counter', 'white', 'figure'],
   computed:{
     isWhite(){
       const zeroBasedCounter = this.counter - 1;

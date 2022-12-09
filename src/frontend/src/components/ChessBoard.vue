@@ -4,8 +4,8 @@
                  :key="field"
                  :counter="field"
                  :white="this.fieldColor"
-
-    />
+                 :figure="this.getFigureFor(field)">
+    </SquareField>
   </div>
 <!--  <SquareField class="img"></SquareField>-->
 </template>
@@ -17,8 +17,19 @@ export default {
   name: "ChessBoard",
   components: {SquareField},
   data() {
+    const whiteFigures = [3,5,6,13]
     return {
+      whiteFigures,
       fieldColor: true
+    }
+  },
+  methods: {
+    getFigureFor(field){
+      if(this.whiteFigures.includes(field)){
+        console.log(field)
+        return "Pawn"
+      }
+      return null
     }
   },
   watch: {
