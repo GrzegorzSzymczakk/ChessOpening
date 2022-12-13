@@ -27,16 +27,16 @@ export default {
 
 <style scoped>
 
-div{
-  justify-content: center;
-}
-
 .white {
   background-color: sandybrown;
 }
 
 .black {
   background-color: saddlebrown;
+}
+div{
+  justify-content: center;
+  align-items: flex-end;
 }
 
 </style>

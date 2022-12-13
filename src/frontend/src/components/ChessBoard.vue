@@ -16,35 +16,62 @@ export default {
   name: "ChessBoard",
   components: {SquareField},
   data() {
-    const whitePawns = [3, 5, 6, 13]
-    const whiteBishops=[59,62]
+    const whitePawns = [49, 50, 51, 52, 53, 54, 55, 56]
+    const blackPawns = [9, 10, 11, 12, 13, 14, 15, 16]
+    const whiteBishops = [59, 62]
+    const blackBishops = [3, 6]
+    const whiteRooks = [57, 64]
+    const blackRooks = [1, 8]
+    const whiteHorses = [58, 63]
+    const blackHorses = [2, 7]
+
+
     return {
-      whitePawns,
-      whiteBishops,
+      whitePawns, blackPawns, whiteBishops, blackBishops, whiteHorses, blackHorses, whiteRooks, blackRooks,
       fieldColor: true,
-      whiteQueen: 60
+      whiteQueen: 60, whiteKing: 61, blackKing: 5, blackQueen: 4
     }
   },
   methods: {
     getFigureFor(field) {
       switch (true) {
         case field === this.whiteQueen: {
-          console.log("wh_queen")
           return "white-queen"
         }
-        case field === 30: {
-          console.log("blqu")
+        case field === this.blackQueen: {
           return "black-queen"
         }
+        case field === this.whiteKing: {
+          return "white-king"
+        }
+        case field === this.blackKing: {
+          return "black-king"
+        }
         case this.whitePawns.includes(field): {
-          console.log("wh_pawn")
           return "white-pawn"
         }
         case this.whiteBishops.includes(field): {
           return "white-bishop"
         }
+        case this.whiteHorses.includes(field): {
+          return "white-horse"
+        }
+        case this.whiteRooks.includes(field): {
+          return "white-rook"
+        }
+        case this.blackPawns.includes(field): {
+          return "black-pawn"
+        }
+        case this.blackBishops.includes(field): {
+          return "black-bishop"
+        }
+        case this.blackHorses.includes(field): {
+          return "black-horse"
+        }
+        case this.blackRooks.includes(field): {
+          return "black-rook"
+        }
         default:
-          console.log("dupass")
           return ""
       }
     }
