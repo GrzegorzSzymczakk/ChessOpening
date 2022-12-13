@@ -17,8 +17,10 @@ export default {
   components: {SquareField},
   data() {
     const whitePawns = [3, 5, 6, 13]
+    const whiteBishops=[59,62]
     return {
       whitePawns,
+      whiteBishops,
       fieldColor: true,
       whiteQueen: 60
     }
@@ -38,9 +40,12 @@ export default {
           console.log("wh_pawn")
           return "white-pawn"
         }
+        case this.whiteBishops.includes(field): {
+          return "white-bishop"
+        }
         default:
           console.log("dupass")
-          return null
+          return ""
       }
     }
   },

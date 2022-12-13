@@ -1,12 +1,11 @@
 <template>
   <div v-if="this.isWhite" class="white" :id="counter">
-    {{ counter }}
-    <FigureComp id="1" :figure="figure"/>
+    <FigureComp :figure="figure" :counter="counter"/>
   </div>
   <div v-else class="black">
-    {{ counter }}
-    <FigureComp id="2" :figure="figure"/>
+    <FigureComp :figure="figure" :counter="counter"/>
   </div>
+
 </template>
 
 <script>
@@ -28,10 +27,8 @@ export default {
 
 <style scoped>
 
-div {
-  width: 80px;
-  height: 80px;
-  border: 1px solid black;
+div{
+  justify-content: center;
 }
 
 .white {
