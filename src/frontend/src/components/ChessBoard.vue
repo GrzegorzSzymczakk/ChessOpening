@@ -7,7 +7,6 @@
                  :figure="this.getFigureFor(field)">
     </SquareField>
   </div>
-<!--  <SquareField class="img"></SquareField>-->
 </template>
 
 <script>
@@ -17,19 +16,32 @@ export default {
   name: "ChessBoard",
   components: {SquareField},
   data() {
-    const whiteFigures = [3,5,6,13]
+    const whitePawns = [3, 5, 6, 13]
     return {
-      whiteFigures,
-      fieldColor: true
+      whitePawns,
+      fieldColor: true,
+      whiteQueen: 60
     }
   },
   methods: {
-    getFigureFor(field){
-      if(this.whiteFigures.includes(field)){
-        console.log(field)
-        return "Pawn"
+    getFigureFor(field) {
+      switch (true) {
+        case field === this.whiteQueen: {
+          console.log("wh_queen")
+          return "white-queen"
+        }
+        case field === 30: {
+          console.log("blqu")
+          return "black-queen"
+        }
+        case this.whitePawns.includes(field): {
+          console.log("wh_pawn")
+          return "white-pawn"
+        }
+        default:
+          console.log("dupass")
+          return null
       }
-      return null
     }
   },
   watch: {
@@ -48,9 +60,6 @@ export default {
   width: 640px;
   height: 640px;
   border: 1px solid black;
-}
-.img{
-  content: url("../assets/white_pawn.png");
 }
 
 </style>
