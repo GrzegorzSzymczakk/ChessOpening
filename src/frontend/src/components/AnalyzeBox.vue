@@ -1,15 +1,17 @@
 <template>
-<div class="analyze">
-  <h2>{{topic}}</h2>
-
-</div>
+  <div class="analyze">
+      <DescriptionComp/>
+  </div>
 </template>
 
 <script>
+import DescriptionComp from "@/components/DescriptionComp";
+
 export default {
   name: "AnalyzeBox",
-  data(){
-    return{
+  components: {DescriptionComp},
+  data() {
+    return {
       topic: "Analyze Box"
     }
   }
@@ -17,10 +19,10 @@ export default {
 </script>
 
 <style scoped>
-.analyze{
-  height: 500px;
-  width: 250px;
+.analyze {
+  height: 800px;
+  width: 400px;
   border: 1px solid black;
+  justify-content: flex-end;
 }
-
 </style>

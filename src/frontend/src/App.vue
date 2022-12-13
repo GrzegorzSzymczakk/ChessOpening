@@ -22,7 +22,7 @@ div{
 .container{
   display: grid;
   justify-content: center;
+  height: 720px;
   grid-row-start: 1;
 }
-
 </style>
