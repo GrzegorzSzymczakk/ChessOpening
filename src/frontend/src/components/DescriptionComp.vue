@@ -1,15 +1,17 @@
 <template>
   <div class="description">
+    <TextBubbleComp/>
     <WizardComp/>
   </div>
 </template>
 
 <script>
 import WizardComp from "@/components/WizardComp";
+import TextBubbleComp from "@/components/TextBubbleComp";
 
 export default {
   name: "DescriptionComp",
-  components: {WizardComp}
+  components: {TextBubbleComp, WizardComp}
 }
 </script>
 
@@ -18,5 +20,6 @@ export default {
   height: 200px;
   align-self: flex-end;
   justify-content: flex-end;
+  flex-direction: column;
 }
 </style>
