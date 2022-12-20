@@ -1,25 +1,33 @@
 <template>
-  <ChapterBox/>
-  <ChessBoardBox class="container"/>
-  <AnalyzeBox/>
+  <div id="app">
+    <ChapterBox/>
+    <ChessBoardBox class="container"/>
+    <AnalyzeBox/>
+  </div>
 </template>
 
-<script>
-import ChessBoardBox from "@/components/ChessBoardBox";
-import ChapterBox from "@/components/ChapterBox";
-import AnalyzeBox from "@/components/AnalyzeBox";
+<script lang="ts">
+import ChessBoardBox from '@/components/ChessBoardBox.vue';
+import ChapterBox from "@/components/ChapterBox.vue";
+import AnalyzeBox from "@/components/AnalyzeBox.vue";
 
 export default {
   name: 'App',
   components: {AnalyzeBox, ChapterBox, ChessBoardBox}
 }
+
 </script>
 
 <style>
-div{
+#app{
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+div {
   display: flex;
 }
-.container{
+
+.container {
   display: grid;
   justify-content: center;
   height: 720px;

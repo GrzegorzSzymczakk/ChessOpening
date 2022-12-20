@@ -9,10 +9,11 @@
   </div>
 </template>
 
-<script>
-import SquareField from "@/components/SquareField";
+<script lang="ts">
+import SquareField from "@/components/SquareField.vue";
+import {defineComponent} from "vue";
 
-export default {
+export default defineComponent({
   name: "ChessBoard",
   components: {SquareField},
   data() {
@@ -29,11 +30,14 @@ export default {
     return {
       whitePawns, blackPawns, whiteBishops, blackBishops, whiteHorses, blackHorses, whiteRooks, blackRooks,
       fieldColor: true,
-      whiteQueen: 60, whiteKing: 61, blackKing: 5, blackQueen: 4
+      whiteQueen: 60,
+      whiteKing: 61,
+      blackKing: 5,
+      blackQueen: 4
     }
   },
   methods: {
-    getFigureFor(field) {
+    getFigureFor(field:number) {
       switch (true) {
         case field === this.whiteQueen: {
           return "white-queen"
@@ -76,12 +80,12 @@ export default {
       }
     }
   },
-  watch: {
-    counter() {
-      this.fieldColor = !this.fieldColor
-    }
-  }
-}
+  // watch: {
+  //   counter() {
+  //     this.fieldColor = !this.fieldColor
+  //   }
+  // }
+})
 </script>
 
 <style scoped>
