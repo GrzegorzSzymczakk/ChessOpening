@@ -5,14 +5,15 @@
   </div>
 </template>
 
-<script>
-import WizardComp from "@/components/WizardComp";
-import TextBubbleComp from "@/components/TextBubbleComp";
+<script lang="ts">
+import WizardComp from "@/components/WizardComp.vue";
+import TextBubbleComp from "@/components/TextBubbleComp.vue";
+import {defineComponent} from "vue";
 
-export default {
+export default defineComponent({
   name: "DescriptionComp",
   components: {TextBubbleComp, WizardComp}
-}
+})
 </script>
 
 <style scoped>

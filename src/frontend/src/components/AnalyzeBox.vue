@@ -4,10 +4,11 @@
   </div>
 </template>
 
-<script>
-import DescriptionComp from "@/components/DescriptionComp";
+<script lang="ts">
+import DescriptionComp from "@/components/DescriptionComp.vue";
+import {defineComponent} from "vue";
 
-export default {
+export default defineComponent({
   name: "AnalyzeBox",
   components: {DescriptionComp},
   data() {
@@ -15,7 +16,7 @@ export default {
       topic: "Analyze Box"
     }
   }
-}
+})
 </script>
 
 <style scoped>

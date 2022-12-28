@@ -1,13 +1,15 @@
 <template>
-  <div v-if="figure!==''" :class="figure"></div>
-  <div v-else >{{counter}}</div>
+  <div v-if="figure!==''" :class="figure" draggable="true"></div>
+  <div v-else draggable="true">{{counter}}</div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import {defineComponent} from "vue";
+
+export default defineComponent({
   name: "FigureComp",
   props: ['figure','counter']
-}
+})
 </script>
 
 <style scoped>

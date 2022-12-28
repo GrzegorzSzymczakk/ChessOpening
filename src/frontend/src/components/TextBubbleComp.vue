@@ -2,10 +2,12 @@
   <div class="bubble">Hei, i am teacher, and here in the text cloud i ll give you some hints about next move!</div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import {defineComponent} from "vue";
+
+export default defineComponent({
   name: "TextBubbleComp"
-}
+})
 </script>
 
 <style scoped>

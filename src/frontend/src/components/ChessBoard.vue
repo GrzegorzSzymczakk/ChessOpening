@@ -79,12 +79,7 @@ export default defineComponent({
           return ""
       }
     }
-  },
-  // watch: {
-  //   counter() {
-  //     this.fieldColor = !this.fieldColor
-  //   }
-  // }
+  }
 })
 </script>
 

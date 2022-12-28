@@ -6,15 +6,16 @@
   </div>
 </template>
 
-<script>
-import ChessBoard from "@/components/ChessBoard";
-import CoordinateNumbers from "@/components/labeling/CoordinateNumbers";
-import CoordinateLetters from "@/components/labeling/CoordinateLetters";
+<script lang="ts">
+import ChessBoard from "@/components/ChessBoard.vue";
+import CoordinateNumbers from "@/components/labeling/CoordinateNumbers.vue";
+import CoordinateLetters from "@/components/labeling/CoordinateLetters.vue";
+import {defineComponent} from "vue";
 
-export default {
+export default defineComponent({
   name: "ChessBoardBox",
   components: {ChessBoard, CoordinateNumbers, CoordinateLetters}
-}
+})
 </script>
 
 <style scoped>

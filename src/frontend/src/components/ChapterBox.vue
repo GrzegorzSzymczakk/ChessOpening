@@ -15,52 +15,60 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import {defineComponent} from "vue";
+
+type Chapter = {
+  name: string;
+  cat: string;
+}
+export default defineComponent({
   name: "ChapterBox",
   data() {
+    const chapters: Chapter[] = [
+      {
+        name: 'Rubinstein',
+        cat: 'French Defense'
+      },
+      {
+        name: 'Dragon',
+        cat: 'Sicilian Defense'
+      },
+      {
+        name: 'Dragon1',
+        cat: 'Sicilian Defense'
+      },
+      {
+        name: 'Dragon2',
+        cat: 'Sicilian Defense'
+      },
+      {
+        name: 'Dragon3',
+        cat: 'Sicilian Defense'
+      },
+      {
+        name: 'Dragon4',
+        cat: 'Sicilian Defense'
+      },
+      {
+        name: 'Dragon5',
+        cat: 'Sicilian Defense'
+      }
+    ];
+
     return {
       pattern: "",
       courses: ['French Defense', 'Ruy Lopez', 'Sicilian Defense'],
-      chapters: [
-        {
-          name: 'Rubinstein',
-          cat: 'French Defense'
-        },
-        {
-          name: 'Dragon',
-          cat: 'Sicilian Defense'
-        },
-        {
-          name: 'Dragon1',
-          cat: 'Sicilian Defense'
-        },
-        {
-          name: 'Dragon2',
-          cat: 'Sicilian Defense'
-        },
-        {
-          name: 'Dragon3',
-          cat: 'Sicilian Defense'
-        },
-        {
-          name: 'Dragon4',
-          cat: 'Sicilian Defense'
-        },
-        {
-          name: 'Dragon5',
-          cat: 'Sicilian Defense'
-        }
-      ]
+      chapters
     }
   },
   computed: {
-    filteredByCourse() {
+    filteredByCourse(): Chapter[] {
       let filter = new RegExp(this.pattern, 'i');
       return this.chapters.filter(el => el.cat.match(filter))
     }
   }
-}
+})
 </script>
 <style scoped>
 
