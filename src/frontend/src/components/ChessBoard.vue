@@ -29,6 +29,7 @@ export default defineComponent({
 
     return {
       whitePawns, blackPawns, whiteBishops, blackBishops, whiteHorses, blackHorses, whiteRooks, blackRooks,
+      blackRooksPic: 'black-rook.png',
       fieldColor: true,
       whiteQueen: 60,
       whiteKing: 61,
@@ -52,7 +53,7 @@ export default defineComponent({
           return "black-king"
         }
         case this.whitePawns.includes(field): {
-          return "white-pawn"
+          return "white_pawn"
         }
         case this.whiteBishops.includes(field): {
           return "white-bishop"
@@ -64,7 +65,7 @@ export default defineComponent({
           return "white-rook"
         }
         case this.blackPawns.includes(field): {
-          return "black-pawn"
+          return "black_pawn"
         }
         case this.blackBishops.includes(field): {
           return "black-bishop"

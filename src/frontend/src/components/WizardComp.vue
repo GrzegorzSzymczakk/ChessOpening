@@ -1,5 +1,5 @@
 <template>
-  <div class="wizard"></div>
+  <div class="wizard" draggable="true"></div>
 </template>
 
 <script lang="ts">

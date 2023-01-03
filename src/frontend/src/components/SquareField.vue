@@ -1,6 +1,6 @@
 <template>
-  <div v-if="this.isWhite" class="white" :id="counter">
-    <FigureComp :figure="figure" :counter="counter" />
+  <div v-if="this.isWhite" :draggable="true" class="white" :id="counter">
+    <FigureComp :figure="figure" :counter="counter"/>
   </div>
   <div v-else class="black">
     <FigureComp :figure="figure" :counter="counter"/>
